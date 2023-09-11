@@ -3,3 +3,25 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  
+}
+
+
+@media screen and (min-width: 767px) {
+  .App {
+    padding: 35px;
+  }
+
+}
+
+@media screen and (min-width: 1050px) {
+  .App {
+    padding: 50px 165px;
+  }
+}
