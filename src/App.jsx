@@ -1,7 +1,10 @@
 import "./App.css";
+import StarterPage from "./components/starterPage/starterPage";
 
 function App() {
-  return <></>;
+  return <>
+  <StarterPage/>
+    </>;
 }
 
 export default App;
