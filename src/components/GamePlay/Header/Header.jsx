@@ -1,3 +1,4 @@
+import starterPage from '../../starterPage/starterPage';
 import './Header.css';
 import { useState, useEffect, useRef } from 'react';
 
@@ -44,7 +45,10 @@ export default function Header() {
             </div>
 
             <div ref={menuBoxRef} className={menuButtonActive? 'menuBoxInside' : 'none'}>
-                    <button className='fontFamily buttonYellow' style={{...styles.buttonStyles}} >Restart</button>
+                    <button className='fontFamily buttonYellow' style={{...styles.buttonStyles}} 
+                    onClick={starterPage}
+                    // RESTARTის დაჭერისას სწორად დავწერე ??
+                    >Restart</button>
                     <button style={{ ...styles.buttonStyles}} className='fontFamily buttonsGray'>New Game</button>
                     <button style={{...styles.buttonStyles}} className='fontFamily buttonsGray' onClick={menuButtonHandler}>Resume Game</button>
             </div>

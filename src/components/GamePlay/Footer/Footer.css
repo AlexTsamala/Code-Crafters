@@ -1,11 +1,24 @@
 
 
+.droebiti {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
 .footerBox {
     height: 70px;
+    width: 327px;
+    display: flex;
+    justify-content: space-between;
+    gap: 12.5px;
 }
 
 .showInfoBox {
     width: 151px;
-    height: 5px;
+    height: 100%;
     background-color: #DFE7EC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
