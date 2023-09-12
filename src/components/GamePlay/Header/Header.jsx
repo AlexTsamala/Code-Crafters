@@ -48,7 +48,7 @@ export default function Header() {
                 <div ref={menuBoxRef} className={menuButtonActive? 'menuBoxInside' : 'none'}>
                         <button className='fontFamily buttonYellow' style={{...styles.buttonStyles}} 
                         onClick={starterPage}
-                        // RESTARTის დაჭერისას სწორად დავწერე ??
+                        // RESTARTის დაჭერისას სწორად დავწერე ??  App-ში state-ს განვსაზღვრავთ და მერე props-მივიღებ boolean
                         >Restart</button>
                         <button style={{ ...styles.buttonStyles}} className='fontFamily buttonsGray'>New Game</button>
                         <button style={{...styles.buttonStyles}} className='fontFamily buttonsGray' onClick={menuButtonHandler}>Resume Game</button>
