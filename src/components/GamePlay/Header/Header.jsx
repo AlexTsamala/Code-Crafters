@@ -37,8 +37,8 @@ export default function Header() {
                     <p className="title fontFamily">memory</p>
                     <button className="menuButton fontFamily" onClick={menuButtonHandler}>Menu</button>
                     <div className='tabletMenu'>
-                        <button style={{...styles.buttonStyles,...styles.tabletButtonStyles}} className='fontFamily buttonYellow'>Restart</button>
-                        <button style={{...styles.buttonStyles,...styles.tabletButtonStyles}} className='fontFamily buttonsGray'>New Game</button>
+                        <button style={{...styles.buttonStyles,...styles.tabletButtonStyles, transition: '0.3s ease-in-out'}} className='fontFamily buttonYellow'>Restart</button>
+                        <button style={{...styles.buttonStyles,...styles.tabletButtonStyles, transition: '0.3s ease-in-out'}} className='fontFamily buttonsGray'>New Game</button>
                     </div>
 
                 </div>
