@@ -7,3 +7,7 @@
     /* justify-content: space-between; */
     gap: 80px;
 }
+
+.opacity50 {
+    opacity: 50%;
+}

@@ -32,52 +32,9 @@
     cursor: pointer;
 }
 
-.menuBoxInsideBigBox {
-    width: 95%;
-    display: flex;
-    justify-content: center;
-    position: absolute;
-    top: 30%;
-}
-
-.menuBoxInside {
-    width: 327px;
-    height: 224px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    background-color: #F2F2F2;
-    border-radius: 10px;
-}
 
 
 
-.buttonYellow {
-    background-color: #FDA214;
-    color: #FCFCFC;
-    transition: '0.3s ease-in-out'
-}
-
-.buttonYellow:hover {
-    cursor: pointer;
-    background-color: #FFB84A;
-}
-
-.buttonsGray {
-    background-color:#DFE7EC;
-    transition: '0.3s ease-in-out'
-}
-
-.buttonsGray:hover {
-    cursor: pointer;
-    background-color: #6395B8;
-    color: #FCFCFC;
-}
-
-.none {
-    display: none;
-}
 
 .tabletMenu {
     display: none;
