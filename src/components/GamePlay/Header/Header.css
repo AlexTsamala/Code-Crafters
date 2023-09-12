@@ -31,6 +31,12 @@
     cursor: pointer;
 }
 
+.menuBoxInsideBigBox {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
 .menuBoxInside {
     width: 327px;
     height: 224px;

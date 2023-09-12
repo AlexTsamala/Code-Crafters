@@ -44,13 +44,15 @@ export default function Header() {
                 </div>
             </div>
 
-            <div ref={menuBoxRef} className={menuButtonActive? 'menuBoxInside' : 'none'}>
-                    <button className='fontFamily buttonYellow' style={{...styles.buttonStyles}} 
-                    onClick={starterPage}
-                    // RESTARTის დაჭერისას სწორად დავწერე ??
-                    >Restart</button>
-                    <button style={{ ...styles.buttonStyles}} className='fontFamily buttonsGray'>New Game</button>
-                    <button style={{...styles.buttonStyles}} className='fontFamily buttonsGray' onClick={menuButtonHandler}>Resume Game</button>
+            <div className={menuButtonActive? 'menuBoxInsideBigBox' : 'none'}>
+                <div ref={menuBoxRef} className={menuButtonActive? 'menuBoxInside' : 'none'}>
+                        <button className='fontFamily buttonYellow' style={{...styles.buttonStyles}} 
+                        onClick={starterPage}
+                        // RESTARTის დაჭერისას სწორად დავწერე ??
+                        >Restart</button>
+                        <button style={{ ...styles.buttonStyles}} className='fontFamily buttonsGray'>New Game</button>
+                        <button style={{...styles.buttonStyles}} className='fontFamily buttonsGray' onClick={menuButtonHandler}>Resume Game</button>
+                </div>
             </div>
         </>
     )
