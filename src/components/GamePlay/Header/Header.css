@@ -1,8 +1,6 @@
 .headerBox {
     width: 100%;
     height: 40px;
-    /* margin-top: 20px; */
-    /* position: relative; */
 }
 
 .headerDiscriptionBox {
@@ -32,58 +30,9 @@
     cursor: pointer;
 }
 
-.menuBoxInsideBigBox {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-.menuBoxInside {
-    width: 327px;
-    height: 224px;
-    position: absolute;
-    top: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    background-color: #F2F2F2;
-    border-radius: 10px;
-}
-
-
-
-.buttonYellow {
-    background-color: #FDA214;
-    color: #FCFCFC;
-    transition: '0.3s ease-in-out'
-}
-
-.buttonYellow:hover {
-    cursor: pointer;
-    background-color: #FFB84A;
-}
-
-.buttonsGray {
-    background-color:#DFE7EC;
-    transition: '0.3s ease-in-out'
-}
-
-.buttonsGray:hover {
-    cursor: pointer;
-    background-color: #6395B8;
-    color: #FCFCFC;
-}
-
-.none {
-    display: none;
-}
-
 .tabletMenu {
     display: none;
 }
-
-
 
 /* ///////////////////////////////// */
 /* Tablet version */
@@ -106,7 +55,6 @@
         display: none;
     }
 }
-
 
 /* /////////////////// */
 /* Desktop version */
