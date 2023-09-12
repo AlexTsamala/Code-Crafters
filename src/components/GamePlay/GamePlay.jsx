@@ -7,6 +7,8 @@ import Footer from "./Footer/Footer";
 import Game from './game/Game';
 import Menu from './Menu/Menu';
 import { useState } from 'react';
+// import SoloFinish from './soloFinish/SoloFinish';
+// იყოს ჩაკომენტარებული სანამ არ დავიწყებ აწყობას
 
 
 export default function GamePlay() {
@@ -26,6 +28,11 @@ export default function GamePlay() {
                     <Footer />
                 </div>
                 <Menu setMenuButtonActive={setMenuButtonActive} menuButtonActive={menuButtonActive} menuButtonHandler={menuButtonHandler} />
+                {/* <SoloFinish */}
+                 {/* className={`${menuButtonActive? 'opacity50': 'HeaderGameFooter' }` */}
+                {/* აქ ასეთი რაღაც გაკეთდება, რო როცა თამაში მორჩება, გამოაჩინოს SoloFinish */}
+                {/* მანამდე კი არაფერი */}
+                  {/* /> */}
                
             </div>
     )

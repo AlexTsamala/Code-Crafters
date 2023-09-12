@@ -46,3 +46,12 @@
 .none {
     display: none;
 }
+
+
+/* ///////////////// */
+
+@media screen and (min-width: 767px) {
+    .menuBoxInside {
+        display: none;
+    }
+}

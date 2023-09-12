@@ -1,8 +1,6 @@
 .headerBox {
     width: 100%;
     height: 40px;
-    /* margin-top: 20px; */
-    /* position: relative; */
 }
 
 .headerDiscriptionBox {
@@ -32,15 +30,9 @@
     cursor: pointer;
 }
 
-
-
-
-
 .tabletMenu {
     display: none;
 }
-
-
 
 /* ///////////////////////////////// */
 /* Tablet version */
@@ -63,7 +55,6 @@
         display: none;
     }
 }
-
 
 /* /////////////////// */
 /* Desktop version */
