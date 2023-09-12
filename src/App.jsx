@@ -1,13 +1,16 @@
 import "./App.css";
-import StarterPage from "./components/starterPage/starterPage";
-import Header from "./components/Header/Header";
+import GamePlay from "./components/GamePlay/GamePlay";
+// import StarterPage from "./components/starterPage/starterPage";
+
 
 function App() {
   return (
     <div className="App">   
-      <StarterPage/>
-      <Header />
+      {/* <StarterPage/> */}
+      <GamePlay />
     </div>
   );
+
+}
 
 export default App;

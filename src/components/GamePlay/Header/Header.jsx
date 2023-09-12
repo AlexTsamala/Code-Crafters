@@ -1,5 +1,6 @@
 import './Header.css';
 import { useState, useEffect, useRef } from 'react';
+
 export default function Header() {
     const [menuButtonActive, setMenuButtonActive] = useState(false);
     const menuBoxRef = useRef(null);
