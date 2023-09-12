@@ -1,0 +1,7 @@
+.components {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    max-width: 326px;
+    margin: 0 auto;
+    gap: 9px;
+}
