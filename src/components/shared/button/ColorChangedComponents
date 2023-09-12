@@ -1,0 +1,14 @@
+
+
+
+
+function ColorChangeComponent() {
+    const [backgroundColor, setBackgroundColor] = useState('#BCCED9'); 
+
+
+    const handleBackgroundColorChange = () => {
+        const changedColor = '#304859';
+
+        setBackgroundColor(changedColor);
+      };
+} 
