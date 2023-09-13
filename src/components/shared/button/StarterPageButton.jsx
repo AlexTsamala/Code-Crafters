@@ -1,6 +1,3 @@
-
-
-
 import React, { useState } from "react";
 import "./Button.css";
 
@@ -9,12 +6,13 @@ const StarterPageButton = ({
   buttonWidth,
   buttonHeight,
   className,
+  setChosenButton,
+  backgroundColor
 }) => {
-  const [backgroundColor, setBackgroundColor] = useState('#BCCED9');
-
+ 
   const handleBackgroundColorChange = () => {
-    const changedColor = '#304859';
-    setBackgroundColor(changedColor);
+
+    setChosenButton(description);
   };
 
   return (
@@ -25,7 +23,7 @@ const StarterPageButton = ({
         height: buttonHeight,
         backgroundColor: backgroundColor,
       }}
-      className={`${className}`}
+      className={`shared-buttons ${className}`}
       onClick={handleBackgroundColorChange}
     >
       {description}

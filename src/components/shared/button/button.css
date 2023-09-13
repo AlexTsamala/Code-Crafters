@@ -9,8 +9,8 @@ button {
   width: 134px;
   height: 40px;
 }
-button:hover{
-  background-color: #6395B8;
+.shared-buttons:hover{
+ background-color: #6395B8!important;
 }
 .numbers {
   width: 62px;
