@@ -1,0 +1,63 @@
+
+
+.droebiti {
+    margin-top: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.footerBox {
+    height: 70px;
+    /* width: 327px; */
+    display: flex;
+    justify-content: space-between;
+    gap: 12.5px;
+}
+
+.showInfoBox {
+    width: 151px;
+    height: 100%;
+    background-color: #DFE7EC;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.timeText {
+    font-size: 15px;
+    color: #7191A5;
+}
+
+.timeClock {
+    font-size: 24px;
+    color: #304859;
+}
+
+/* Tablet version */
+
+@media screen and (min-width: 767px) {
+
+    .footerBox {
+        height: 72px;
+        gap: 25px;
+    }
+
+    .showInfoBox {
+        width: 255px;
+        height: 72px;
+        
+        
+    }
+
+    .timeText {
+        font-size: 18px;
+    }
+
+    .timeClock {
+        font-size: 32px;
+    }
+    
+}

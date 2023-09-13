@@ -1,0 +1,13 @@
+
+
+.gamePlay {
+    /* height: 100vh; */
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    gap: 80px;
+}
+
+.opacity50 {
+    opacity: 50%;
+}
