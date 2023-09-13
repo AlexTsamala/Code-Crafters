@@ -11,11 +11,8 @@ import { useEffect, useState } from 'react';
 
 
 import SoloFinish from "./soloFinish/SoloFinish";
-// import { useState } from "react";
 
 
-// import SoloFinish from './soloFinish/SoloFinish';
-// იყოს ჩაკომენტარებული სანამ არ დავიწყებ აწყობას
 export default function GamePlay() {
 
 const [timing, setTiming] = useState(0);
@@ -43,7 +40,7 @@ const seconds = timing % 60;
   return (
     <div className="gamePlay">
 
-    {/* ქვედა დივი ამოიღე კომენტარიდან, სოლოფინიშ რომ გამომეჩინა ამიტომ გავაკეთე და გასასწორებელია, გაცენტრვა უნდა */}
+    {/* ქვედა დივი ამოიღე კომენტარიდან, სოლოფინიშ რომ გამომეჩინა ამიტომ გავაკეთე და გასასწორებელია, გაცენტრვა უნდა (გიორგი) */}
       <div className={`${menuButtonActive ? "opacity50" : "HeaderGameFooter"}`}>
         <Header name={menuButtonHandler} />
         <Game />
@@ -56,8 +53,7 @@ const seconds = timing % 60;
         menuButtonHandler={menuButtonHandler}
       />
 
-      {/* აქ solofinish რო გამოჩნდეს, მაშინ, menuButtonActive true-დ უნდა გავხადო და სხვა დანარჩენს opacity50 უნდა ჰქონდეს */}
-      
+      {/* აქ solofinish რო გამოჩნდეს, მაშინ, menuButtonActive true-დ უნდა გავხადო და სხვა დანარჩენს opacity50 უნდა ჰქონდეს (გიორგი) */}
       <SoloFinish minutes={minutes} seconds={seconds} />
       
     </div>
