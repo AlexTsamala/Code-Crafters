@@ -3,6 +3,7 @@
 import './GamePlay.css';
 import Header from "./Header/Header";
 import Footer from "./Footer/Footer";
+import Game from '../game/Game';
 
 export default function GamePlay() {
 
@@ -12,6 +13,7 @@ export default function GamePlay() {
 
         <div className="gamePlay">
            <Header />
+           <Game />
            <Footer />
 
 

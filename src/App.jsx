@@ -7,7 +7,7 @@ function App() {
 //   const [startGame, setStartGame] = useState(false);
   return (
     <div className="App">   
-      <StarterPage />
+      {/* <StarterPage /> */}
       <GamePlay />
     </div>
   );
