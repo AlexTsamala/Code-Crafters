@@ -96,3 +96,17 @@
 
 
 
+
+/* //////////////////////// */
+@media screen and (min-width: 767px) {
+    .soloFinishBigBox {
+        width: 70%;
+        left: 15%;
+        top: 19%;
+    }
+}
+
+/* Desktop */
+@media screen and (min-width: 767px) {
+
+}
