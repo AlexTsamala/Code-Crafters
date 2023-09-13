@@ -10,8 +10,6 @@ import { useState } from "react";
 // import SoloFinish from './soloFinish/SoloFinish';
 // იყოს ჩაკომენტარებული სანამ არ დავიწყებ აწყობას
 
-import Game from "../game/Game";
-
 export default function GamePlay() {
   const [menuButtonActive, setMenuButtonActive] = useState(false);
   const menuButtonHandler = () => {
@@ -21,6 +19,7 @@ export default function GamePlay() {
   return (
     <div className="gamePlay">
       <Header />
+      <Game />
       <Footer />
     </div>
   );
