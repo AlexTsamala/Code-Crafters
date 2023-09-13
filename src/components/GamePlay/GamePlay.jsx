@@ -16,11 +16,20 @@ export default function GamePlay() {
     setMenuButtonActive(!menuButtonActive);
   };
 
-  return (
-    <div className="gamePlay">
-      <Header />
-      <Game />
-      <Footer />
-    </div>
-  );
+
+        <div className="gamePlay">
+            <div className={`${menuButtonActive? 'opacity50': 'HeaderGameFooter' }`}>
+                <Header name={menuButtonHandler} />
+                <Game />
+                <Footer />
+            </div>
+            <Menu setMenuButtonActive={setMenuButtonActive} menuButtonActive={menuButtonActive} menuButtonHandler={menuButtonHandler} />
+            {/* <SoloFinish */}
+             {/* className={`${menuButtonActive? 'opacity50': 'HeaderGameFooter' }` */}
+            {/* აქ ასეთი რაღაც გაკეთდება, რო როცა თამაში მორჩება, გამოაჩინოს SoloFinish */}
+            {/* მანამდე კი არაფერი */}
+              {/* /> */}
+        </div>
+    )
+
 }
