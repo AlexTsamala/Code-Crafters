@@ -1,4 +1,20 @@
 button {
+    background: #304859;
+    color: #FCFCFC;
+    font-weight: 700;
+    font-size: 24px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}
+
+button p {
+    scale: 0;
+}
+
+.active {
     background: #BCCED9;
     color: #FCFCFC;
     font-weight: 700;
@@ -10,7 +26,11 @@ button {
     cursor: pointer;
 }
 
-.active {
+.active p {
+    scale: 1;
+}
+
+.correct {
     background: #FDA214;
     color: #FCFCFC;
     font-weight: 700;
@@ -20,4 +40,24 @@ button {
     border-radius: 50%;
     border: none;
     cursor: pointer;
+}
+
+.correct p {
+    scale: 1;
+}
+
+.wrong {
+    background: #fd1414;
+    color: #FCFCFC;
+    font-weight: 700;
+    font-size: 24px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}
+
+.wrong p {
+    scale: 1;
 }

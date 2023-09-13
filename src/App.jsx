@@ -3,15 +3,13 @@ import GamePlay from "./components/GamePlay/GamePlay";
 import StarterPage from "./components/starterPage/starterPage";
 // import { useState } from "react";
 
-
-
 function App() {
   // const [startGame, setStartGame] = useState(false);
   // const startGameHandler = () => {
   //   setStartGame(!startGame);
   // }
   return (
-    <div className="App">   
+    <div className="App">
       {/* eslint-disable-next-line react/jsx-no-undef */}
       {/* აქ, მე–10 ხაზზე, დატოვეთ კომენტარად (გიორგი) */}
       <StarterPage
@@ -22,7 +20,6 @@ function App() {
       <GamePlay />
     </div>
   );
-
 }
 
 export default App;

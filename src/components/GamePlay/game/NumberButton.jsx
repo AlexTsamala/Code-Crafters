@@ -1,17 +1,26 @@
-import React from 'react'
-import "./NumberButton.css"
-import { useState } from 'react'
+import React from "react";
+import "./NumberButton.css";
 
-function NumberButton({number}) {
-
-  const [ value, setValue ] = useState(null)
-
+function NumberButton({ number, handleClick, id, stat }) {
   return (
-      <button type='button' onClick={() => {
-        if(value === null) {
-          setValue(number);
+    <button
+      className={stat}
+      type="button"
+      onClick={() => {
+        if (stat === "correct") {
+          return;
         }
-      }}>{value}</button>
-    )
-  }
-export default NumberButton
+        if (stat === "active") {
+          return;
+        }
+        if (stat === "wrong") {
+          return;
+        }
+        handleClick(id);
+      }}
+    >
+      <p>{number}</p>
+    </button>
+  );
+}
+export default NumberButton;
