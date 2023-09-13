@@ -1,7 +1,26 @@
 // import Button from '../shared/button/button';
 import './Footer.css';
+import { useEffect, useState } from 'react';
 
 export default function Footer() {
+    const [timing, setTiming] = useState(0);
+
+         useEffect(() => {
+
+
+       const intervalId = setInterval(() => {
+            setTiming((preTime) => preTime + 1);
+        }, 1000)
+
+        return () => {clearInterval(intervalId)};
+
+    },[]);
+
+
+    const minutes = Math.floor(timing / 60);
+    const seconds = timing % 60;
+
+    // კარგი იქნება თუ ეს ტაიმერი პირველი გეიმის, აიქონზე კლიკისას დაიწყება
 
 
     return (
@@ -11,15 +30,16 @@ export default function Footer() {
 
             <div className="footerBox">
                 <div className='showInfoBox'>
-                    <p className='fontFamily' style={{fontSize:'15px', color: '#7191A5'}}>Time</p>
-                    <p>
-                        {/* დრო უნდა შემოიტანო */}
+                    <p className='fontFamily timeText' >Time</p>
+                    <p className='fontFamily timeClock' >
+                    <p>{`${minutes}:${seconds < 10 ? `0${seconds}` : seconds}`}</p>
                     </p>
                 </div>
                 <div className='showInfoBox'>
-                    <p className='fontFamily' style={{fontSize:'15px', color: '#7191A5'}}>Moves</p>
-                    <p>
-                        {/* მოძრაობა უნდა შემოიტანო */}
+                    <p className='fontFamily timeText' >Moves</p>
+                    <p className='fontFamily timeClock'>
+                        {/* მოძრაობა უნდა შემოიტანო, props-ად უნდა მივიღო  Game ფოლდერიდან */}
+                        ??
                     </p>
                 </div>
 
