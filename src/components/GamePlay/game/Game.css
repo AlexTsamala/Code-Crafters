@@ -11,6 +11,14 @@
     gap: 9px;
 }
 
+.components-mini {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    max-width: 326px;
+    margin: 0 auto;
+    gap: 9px;
+}
+
 .hidden {
     position: absolute;
     width: 100%;
@@ -18,4 +26,16 @@
     top: 0;
     left: 0;
     z-index: 999;
+}
+
+img {
+    width: 20px;
+}
+
+@media screen and (min-width: 768px) {
+
+    .components,
+    .components-mini {
+        max-width: 572px;
+    }
 }
