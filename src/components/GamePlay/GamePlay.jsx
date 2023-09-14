@@ -16,17 +16,30 @@ import SoloFinish from "./soloFinish/SoloFinish";
 export default function GamePlay() {
 
 const [timing, setTiming] = useState(0);
+const [intervalId, setIntervalId] = useState(null);
+const [stopGamePlays, setStopGamePlays ] = useState(false);
+
+const stopGamePlaysHandler = () => {
+  setStopGamePlays(true);
+}
+
 
 useEffect(() => {
-
-
-const intervalId = setInterval(() => {
+const id = setInterval(() => {
    setTiming((preTime) => preTime + 1);
 }, 1000)
-
-return () => {clearInterval(intervalId)};
-
+setIntervalId(id);
+return () => {clearInterval(id)};
 },[]);
+
+
+// result of time
+if(stopGamePlays === true) {
+     // eslint-disable-next-line no-undef
+     clearInterval(intervalId);
+}
+
+
 
 
 const minutes = Math.floor(timing / 60);
@@ -42,6 +55,8 @@ const seconds = timing % 60;
 
     {/* ქვედა დივი ამოიღე კომენტარიდან, სოლოფინიშ რომ გამომეჩინა ამიტომ გავაკეთე და გასასწორებელია, გაცენტრვა უნდა (გიორგი) */}
       <div className={`${menuButtonActive ? "opacity50" : "HeaderGameFooter"}`}>
+
+      {/* ეს ბუთონი სტოპის ისე დავწერე, საცდელად */}
         <Header name={menuButtonHandler} />
         <Game />
         <Footer minutes={minutes} seconds={seconds} />
@@ -55,6 +70,7 @@ const seconds = timing % 60;
 
       {/* აქ solofinish რო გამოჩნდეს, მაშინ, menuButtonActive true-დ უნდა გავხადო და სხვა დანარჩენს opacity50 უნდა ჰქონდეს (გიორგი) */}
       <SoloFinish minutes={minutes} seconds={seconds} />
+
       
     </div>
   );
