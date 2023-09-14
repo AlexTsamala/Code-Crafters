@@ -18,10 +18,18 @@ export default function GamePlay() {
 const [timing, setTiming] = useState(0);
 const [intervalId, setIntervalId] = useState(null);
 const [stopGamePlays, setStopGamePlays ] = useState(false);
+// აქ შეიშლება let დასჭირდეს
+const numberOfMove = 0;
 
 const stopGamePlaysHandler = () => {
   setStopGamePlays(true);
 }
+
+const numberOfMoveHandler = () => {
+  numberOfMove + 1;
+}
+
+
 
 
 useEffect(() => {
@@ -69,7 +77,7 @@ const seconds = timing % 60;
       />
 
       {/* აქ solofinish რო გამოჩნდეს, მაშინ, menuButtonActive true-დ უნდა გავხადო და სხვა დანარჩენს opacity50 უნდა ჰქონდეს (გიორგი) */}
-      <SoloFinish minutes={minutes} seconds={seconds} />
+      <SoloFinish minutes={minutes} seconds={seconds} numberOfMove={numberOfMove} />
 
       
     </div>
