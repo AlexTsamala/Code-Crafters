@@ -4,6 +4,7 @@ import './SoloFinish.css';
 
 // eslint-disable-next-line react/prop-types
 export default function SoloFinish({seconds, minutes}) {
+    // აქ მაღლა numberOfMove პროპს ჩაამატე
 
     return (
         <div className='soloFinishBigBox'>
@@ -19,7 +20,7 @@ export default function SoloFinish({seconds, minutes}) {
                 <div className='timeAndMoveBox marginAdd'>
                     <span className='fontFamily timeElapsed'>Moves Taken</span>
                     <span className='fontFamily showTimeAndMove'>
-                        {/* {moves with props } */} Moves
+                        {/* {numberOfMove} */} Moves
                     </span>
                 </div>
                 <button className='fontFamily soloRestart'>Restart</button>
