@@ -1,14 +1,9 @@
-// import starterPage from '../../starterPage/starterPage';
-
-// import Button from '../shared/button/button';
+import React, { useEffect, useState } from "react";
 import "./GamePlay.css";
-// ქვედა ოთხი ხაზი ამოიღე კომენტარიდან
 import Header from "./Header/Header";
 import Footer from "./Footer/Footer";
 import Game from "./game/Game";
 import Menu from "./Menu/Menu";
-import { useEffect, useState } from "react";
-
 import SoloFinish from "./soloFinish/SoloFinish";
 
 export default function GamePlay() {
@@ -16,11 +11,19 @@ export default function GamePlay() {
   const [timing, setTiming] = useState(0);
   const [intervalId, setIntervalId] = useState(null);
   const [stopGamePlays, setStopGamePlays] = useState(false);
-  // აქ შეიშლება let დასჭირდეს
+  const [finishNumbers4x4, setFinishNumbers4x4] = useState(0);
 
-  const stopGamePlaysHandler = () => {
-    setStopGamePlays(true);
+  const stopGameTimeNumber4x4 = () => {
+    setFinishNumbers4x4(finishNumbers4x4 + 1);
   };
+
+  // Use useEffect to handle side effects when finishNumbers4x4 changes
+  useEffect(() => {
+    if (finishNumbers4x4 === 1) {
+      setStopGamePlays(true);
+      clearInterval(intervalId);
+    }
+  }, [finishNumbers4x4, intervalId]);
 
   const numberOfMoveHandler = () => {
     setNumberOfMove(numberOfMove + 1);
@@ -36,12 +39,6 @@ export default function GamePlay() {
     };
   }, []);
 
-  // result of time
-  if (stopGamePlays === true) {
-    // eslint-disable-next-line no-undef
-    clearInterval(intervalId);
-  }
-
   const minutes = Math.floor(timing / 60);
   const seconds = timing % 60;
 
@@ -52,28 +49,32 @@ export default function GamePlay() {
 
   return (
     <div className="gamePlay">
-      {/* ქვედა დივი ამოიღე კომენტარიდან, სოლოფინიშ რომ გამომეჩინა ამიტომ გავაკეთე და გასასწორებელია, გაცენტრვა უნდა (გიორგი) */}
       <div className={`${menuButtonActive ? "opacity50" : "HeaderGameFooter"}`}>
-        {/* ეს ბუთონი სტოპის ისე დავწერე, საცდელად */}
         <Header name={menuButtonHandler} />
+        {finishNumbers4x4 && (
+          <SoloFinish
+            minutes={minutes}
+            seconds={seconds}
+            numberOfMove={numberOfMove}
+          />
+        )}
+
         <Game
-          stopGamePlaysHandler={stopGamePlaysHandler}
+          stopGamePlaysHandler={() => setStopGamePlays(true)}
           numberOfMoveHandler={numberOfMoveHandler}
+          stopGameTimeNumber4x4={stopGameTimeNumber4x4}
         />
-        <Footer minutes={minutes} seconds={seconds} />
+        <Footer
+          minutes={minutes}
+          seconds={seconds}
+          numberOfMove={numberOfMove}
+        />
       </div>
 
       <Menu
         setMenuButtonActive={setMenuButtonActive}
         menuButtonActive={menuButtonActive}
         menuButtonHandler={menuButtonHandler}
-      />
-
-      {/* აქ solofinish რო გამოჩნდეს, მაშინ, menuButtonActive true-დ უნდა გავხადო და სხვა დანარჩენს opacity50 უნდა ჰქონდეს (გიორგი) */}
-      <SoloFinish
-        minutes={minutes}
-        seconds={seconds}
-        numberOfMove={numberOfMove}
       />
     </div>
   );
