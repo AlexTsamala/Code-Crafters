@@ -1,0 +1,131 @@
+.container {
+  width: 327px;
+  border-radius: 10px;
+  background-color: #f2f2f2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: auto;
+  margin-top: 90px;
+  padding: 34px 24px 38px 24px;
+}
+.result-title {
+  color: #152938;
+  text-align: center;
+  font-size: 24px;
+}
+.result {
+  color: #7191a5;
+  text-align: center;
+  font-size: 14px;
+  margin-top: 10px;
+}
+.first-result-box,
+.second-result-box,
+.third-result-box,
+.four-result-box {
+  border-radius: 5px;
+  background-color: #dfe7ec;
+  width: 279px;
+  margin-top: 24px;
+  height: 48px;
+  display: flex;
+  flex-direction: row;
+}
+.player1,
+.player2,
+.player3,
+.player4 {
+  color: #7191a5;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  margin-left: 16px;
+}
+.result-pairs {
+  color: #304859;
+  text-align: right;
+  margin-left: auto;
+  margin-right: 15px;
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+}
+.restart {
+  width: 100%;
+  border-radius: 26px;
+  background-color: #fda214;
+  color: #fcfcfc;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+  width: 100%;
+  height: 48px;
+}
+.setup-new-game {
+  margin-top: 16px;
+  color: #304859;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 26px;
+  background-color: #dfe7ec;
+  width: 100%;
+  height: 48px;
+}
+.button-part{
+display: flex;
+flex-direction: column;
+margin-top: 24px;
+width: 100%;
+}
+@media (min-width: 768px) {
+
+.container{
+  width: 654px;
+  padding: 51px 56px 68px 56px;
+}
+.result-title{
+  font-size: 48px;
+}
+.result{
+  font-size: 18px;
+  margin-top: 16px;
+}
+.first-result-box,
+.second-result-box,
+.third-result-box,
+.four-result-box{
+  width: 100%;
+  height: 72px;
+  border-radius: 10px;
+  margin-top: 16px;
+}
+.first-result-box{
+  margin-top: 40px;
+}
+.player1,
+.player2,
+.player3,
+.player4 {
+  font-size: 18px;
+}
+.result-pairs{
+  margin-right: 32px;
+  font-size: 28px;
+}
+.button-part{
+  display: flex;
+  flex-direction: row;
+  gap:5px;
+}
+.setup-new-game{
+  margin-top: 0;
+  width: 264px;
+height: 52px;
+}
+.restart{
+  width: 264px;
+height: 52px;
+}
+}
