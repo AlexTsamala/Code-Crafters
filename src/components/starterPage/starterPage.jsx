@@ -1,7 +1,7 @@
 import "./starterPage.css"
 import Button from "../shared/button/button"
 
-const starterPage = () => {
+const starterPage = ({startGameHandler}) => {
     return (
         <div className="main">
          <h1 className="title">memory</h1>
@@ -16,7 +16,7 @@ const starterPage = () => {
             <div className="third">
                 <h2 className="grid-size">Grid Size</h2>
             </div>
-            <button className="Yellow-button">Start Game</button>
+            <button className="Yellow-button" onClick={startGameHandler}>Start Game</button>
          </div>
         </div>
     )
