@@ -1,6 +1,6 @@
 import "./App.css";
 import GamePlay from "./components/GamePlay/GamePlay";
-import StarterPage from "./components/starterPage/starterPage";
+// import StarterPage from "./components/starterPage/starterPage";
 // import { useState } from "react";
 
 function App() {

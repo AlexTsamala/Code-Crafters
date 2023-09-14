@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import NumberButton from "./NumberButton";
 import "./Game.css";
 import { numbers, numbersMini } from "./Number";
