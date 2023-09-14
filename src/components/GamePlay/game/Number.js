@@ -1,4 +1,4 @@
-const numbers = [
+export const numbers = [
   { id: 1, content: 1, stat: "" },
   { id: 1, content: 1, stat: "" },
   { id: 2, content: 2, stat: "" },
@@ -37,4 +37,21 @@ const numbers = [
   { id: 18, content: 18, stat: "" },
 ].sort(() => Math.random() - 0.5);
 
-export default numbers;
+export const numbersMini = [
+  { id: 1, content: 1, stat: "" },
+  { id: 1, content: 1, stat: "" },
+  { id: 2, content: 2, stat: "" },
+  { id: 2, content: 2, stat: "" },
+  { id: 3, content: 3, stat: "" },
+  { id: 3, content: 3, stat: "" },
+  { id: 4, content: 4, stat: "" },
+  { id: 4, content: 4, stat: "" },
+  { id: 5, content: 5, stat: "" },
+  { id: 5, content: 5, stat: "" },
+  { id: 6, content: 6, stat: "" },
+  { id: 6, content: 6, stat: "" },
+  { id: 7, content: 7, stat: "" },
+  { id: 7, content: 7, stat: "" },
+  { id: 8, content: 8, stat: "" },
+  { id: 8, content: 8, stat: "" },
+].sort(() => Math.random() - 0.5);

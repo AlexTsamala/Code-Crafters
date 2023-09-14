@@ -1,10 +1,10 @@
 import React from "react";
 import "./NumberButton.css";
 
-function NumberButton({ number, handleClick, id, stat }) {
+function NumberButton({ number, handleClick, id, stat, itemsIsMini }) {
   return (
     <button
-      className={stat}
+      className={itemsIsMini ? stat + "-mini" : stat}
       type="button"
       onClick={() => {
         if (stat === "correct") {

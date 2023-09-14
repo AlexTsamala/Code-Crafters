@@ -13,14 +13,11 @@ function App() {
       {/* eslint-disable-next-line react/jsx-no-undef */}
       {/* აქ, მე–10 ხაზზე, დატოვეთ კომენტარად (გიორგი) */}
 
-      {/* { startGame ? <GamePlay/> : <StarterPage startGameHandler={startGameHandler}/>} */}
-
+      {/* startGameHandler={startGameHandler}
+      სალომე, მე–18, მე–4, მე–9 ხაზზე რაც წერია ამოაკომენტარე. props-ად მიგაქვს, შენს კოდში
+      და start Games-ის ღილაკს რომ დააწვები, გააქრობს შენს გვერდს და გაეშვება GamePlay-ს კოდი (გიორგი) */}
       {/* <StarterPage /> */}
-
-      {/* // startGameHandler={startGameHandler}
-      // სალომე, მე–18, მე–4, მე–9 ხაზზე რაც წერია ამოაკომენტარე. props-ად მიგაქვს, შენს კოდში
-      // და start Games-ის ღილაკს რომ დააწვები, გააქრობს შენს გვერდს და გაეშვება GamePlay-ს კოდი (გიორგი) */}
-      <GamePlay  />
+      <GamePlay />
     </div>
   );
 }

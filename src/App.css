@@ -1,4 +1,4 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -23,9 +23,9 @@
     padding: 30px 165px;
   }
 
-#root{
-  height: 100vh;
-  width: 100vw;
-}
+  #root {
+    height: 100vh;
+    width: 100vw;
+  }
 
 }
