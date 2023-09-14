@@ -5,7 +5,7 @@ import { numbers, numbersMini } from "./Number";
 import { icons, iconsMini } from "./Icons";
 import IconsButton from "./IconsButton";
 
-function Game() {
+function Game({ stopGamePlaysHandler, numberOfMoveHandler }) {
   const [itemsIsMini, setItemsIsMini] = useState(false);
   const [items, setItems] = useState(itemsIsMini ? numbersMini : numbers);
   const [iconsIsMini, setIconsIsMini] = useState(false);
@@ -22,11 +22,13 @@ function Game() {
       items[prev].stat = "correct";
       setItems([...items]);
       setPrev(-1);
+      numberOfMoveHandler();
     } else {
       items[current].stat = "wrong";
       items[prev].stat = "wrong";
       setItems([...items]);
       setHidden(true);
+      numberOfMoveHandler();
       setTimeout(() => {
         items[current].stat = "";
         items[prev].stat = "";
@@ -48,11 +50,13 @@ function Game() {
 
   const checkIcons = (current) => {
     if (importIcons[current].id == importIcons[prev].id) {
+      numberOfMoveHandler();
       importIcons[current].stat = "correct-icon";
       importIcons[prev].stat = "correct-icon";
       setItems([...importIcons]);
       setPrev(-1);
     } else {
+      numberOfMoveHandler();
       importIcons[current].stat = "wrong-icon";
       importIcons[prev].stat = "wrong-icon";
       setItems([...importIcons]);
