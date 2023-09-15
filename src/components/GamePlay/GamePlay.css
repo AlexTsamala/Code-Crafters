@@ -1,5 +1,3 @@
-
-
 .gamePlay {
     /* height: 100vh; */
     display: flex;
@@ -10,4 +8,5 @@
 
 .opacity50 {
     opacity: 50%;
+    background: #a8a8a8;
 }
