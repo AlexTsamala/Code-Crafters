@@ -49,6 +49,7 @@ export default function GamePlay() {
 
   return (
     <div className="gamePlay">
+      <button></button>
       <div className={`${menuButtonActive ? "opacity50" : "HeaderGameFooter"}`}>
         <Header name={menuButtonHandler} />
         {finishNumbers4x4 && (
@@ -79,3 +80,5 @@ export default function GamePlay() {
     </div>
   );
 }
+
+// blbalblablbalbla
