@@ -1,11 +1,12 @@
 
 
 .menuBoxInsideBigBox {
-    width: 95%;
+    width: 100%;
     display: flex;
     justify-content: center;
     position: absolute;
     top: 30%;
+    left: 0;
 }
 
 .menuBoxInside {

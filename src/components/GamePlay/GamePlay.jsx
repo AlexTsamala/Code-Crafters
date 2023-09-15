@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { useEffect, useState } from "react";
 import "./GamePlay.css";
 import Header from "./Header/Header";
@@ -6,7 +7,8 @@ import Game from "./game/Game";
 import Menu from "./Menu/Menu";
 import SoloFinish from "./soloFinish/SoloFinish";
 
-export default function GamePlay() {
+// eslint-disable-next-line react/prop-types
+export default function GamePlay({infosHandler, gridSize6, gridSize4, themeNumbers, themeIcons}) {
   const [numberOfMove, setNumberOfMove] = useState(0);
   const [timing, setTiming] = useState(0);
   const [intervalId, setIntervalId] = useState(null);
@@ -50,7 +52,6 @@ export default function GamePlay() {
 
   return (
     <div className="gamePlay">
-      <button></button>
       <div className={`${menuButtonActive ? "opacity50" : "HeaderGameFooter"}`}>
         <Header name={menuButtonHandler} />
         {finishNumbers4x4 && (
@@ -65,6 +66,11 @@ export default function GamePlay() {
           stopGamePlaysHandler={() => setStopGamePlays(true)}
           numberOfMoveHandler={numberOfMoveHandler}
           stopGameTimeNumber4x4={stopGameTimeNumber4x4}
+          infosHandler={infosHandler}
+          gridSize6={gridSize6}
+          gridSize4={gridSize4}
+          themeNumbers={themeNumbers}
+          themeIcons={themeIcons}
         />
         <Footer
           minutes={minutes}

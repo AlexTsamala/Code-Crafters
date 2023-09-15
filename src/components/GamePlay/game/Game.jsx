@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/prop-types */
+import { useState } from "react";
 import NumberButton from "./NumberButton";
 import IconsButton from "./IconsButton";
 import "./Game.css";
@@ -6,15 +8,36 @@ import { numbers, numbersMini } from "./Number";
 import { icons, iconsMini } from "./Icons";
 
 function Game({
+  // eslint-disable-next-line react/prop-types
   stopGamePlaysHandler,
+  // eslint-disable-next-line react/prop-types
   numberOfMoveHandler,
+  // eslint-disable-next-line react/prop-types
   stopGameTimeNumber4x4,
+  // eslint-disable-next-line react/prop-types
+
+  gridSize4,
+  // eslint-disable-next-line no-unused-vars
+  
+  themeNumbers,
+   
 }) {
-  const [itemsIsMini, setItemsIsMini] = useState(true);
+  const [itemsIsMini, setItemsIsMini] = useState(false);
   const [items, setItems] = useState(itemsIsMini ? numbersMini : numbers);
   const [prev, setPrev] = useState(-1);
   const [hidden, setHidden] = useState(false);
-  const [numberIsTrue, setNumberIsTrue] = useState(true);
+  const [numberIsTrue, setNumberIsTrue] = useState(false);
+
+  if(gridSize4 === true) {
+    itemsIsMini(true);
+  }
+  
+  if(themeNumbers === true) {
+    setNumberIsTrue(true);
+  }
+
+  
+  
 
   const check = (current) => {
     if (items[current].id === items[prev].id) {
