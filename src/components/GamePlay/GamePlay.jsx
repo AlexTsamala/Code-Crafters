@@ -50,8 +50,13 @@ export default function GamePlay() {
     setMenuButtonActive(!menuButtonActive);
   };
 
+  const stopsHandler = () => {
+    setStopGamePlays(true);
+  }
+
   return (
     <div className="gamePlay">
+      <button onClick={stopsHandler}>111111111111111</button>
       {/* ქვედა დივი ამოიღე კომენტარიდან, სოლოფინიშ რომ გამომეჩინა ამიტომ გავაკეთე და გასასწორებელია, გაცენტრვა უნდა (გიორგი) */}
       <div className={`${menuButtonActive ? "opacity50" : "HeaderGameFooter"}`}>
         {/* ეს ბუთონი სტოპის ისე დავწერე, საცდელად */}
