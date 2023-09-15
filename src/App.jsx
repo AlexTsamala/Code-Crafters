@@ -1,8 +1,7 @@
 import "./App.css";
 import GamePlay from "./components/GamePlay/GamePlay";
-import HomePage from "./components/HomePage/HomePage";
-import ResultPage from "./components/ResultPage/ResultPage";
-import { useState } from "react";
+// import StarterPage from "./components/starterPage/starterPage";
+// import { useState } from "react";
 
 function App() {
   const [startGame, setStartGame] = useState(false);
@@ -81,31 +80,12 @@ function App() {
     <div className="App">
       {/* eslint-disable-next-line react/jsx-no-undef */}
       {/* აქ, მე–10 ხაზზე, დატოვეთ კომენტარად (გიორგი) */}
-      {/* // startGameHandler={startGameHandler}
+      <StarterPage
+      // startGameHandler={startGameHandler}
       // სალომე, მე–18, მე–4, მე–9 ხაზზე რაც წერია ამოაკომენტარე. props-ად მიგაქვს, შენს კოდში
       // და start Games-ის ღილაკს რომ დააწვები, გააქრობს შენს გვერდს და გაეშვება GamePlay-ს კოდი (გიორგი)
-    */}
-      {/* {startGame ? (
-        <GamePlay />
-      ) : (
-        <HomePage startGameHandler={startGameHandler} infosHandler={infosHandler} />
-        <HomePage startGameHandler={startGameHandler} infosHandler={infosHandler} />
-       
-      )} */}
-
-      {/* <GamePlay/>
-    <HomePage startGameHandler={startGameHandler}/> */}
-
-     {showGamePlayAfterRestart ? (
-       <GamePlay />
-       ) : (
-         <ResultPage showGamePlayAfterRestartHandler={showGamePlayAfterRestartHandler}/>
-      )}
-        {showHomePageAfterSetup ? (
-     <HomePage startGameHandler={startGameHandler} infosHandler={infosHandler} />
-       ) : (
-         <ResultPage showHomePageAfterSetupHandler={showHomePageAfterSetupHandler}/>
-      )}
+      />
+      <GamePlay />
     </div>
   );
 }

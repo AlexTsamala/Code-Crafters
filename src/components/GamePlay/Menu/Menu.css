@@ -1,11 +1,10 @@
-
-
 .menuBoxInsideBigBox {
-    width: 95%;
+    width: 100%;
     display: flex;
     justify-content: center;
     position: absolute;
     top: 30%;
+    left: 0;
 }
 
 .menuBoxInside {
@@ -32,8 +31,8 @@
 }
 
 .buttonsGray {
-    background-color:#DFE7EC;
-    color:#304859;
+    background-color: #DFE7EC;
+    color: #304859;
     transition: '0.3s ease-in-out'
 }
 

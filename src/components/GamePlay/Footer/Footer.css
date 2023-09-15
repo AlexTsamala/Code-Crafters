@@ -1,5 +1,3 @@
-
-
 .droebiti {
     margin-top: 100px;
     width: 100%;
@@ -48,8 +46,8 @@
     .showInfoBox {
         width: 255px;
         height: 72px;
-        
-        
+
+
     }
 
     .timeText {
@@ -59,5 +57,5 @@
     .timeClock {
         font-size: 32px;
     }
-    
+
 }
