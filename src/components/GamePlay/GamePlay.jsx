@@ -10,7 +10,8 @@ export default function GamePlay() {
   const [numberOfMove, setNumberOfMove] = useState(0);
   const [timing, setTiming] = useState(0);
   const [intervalId, setIntervalId] = useState(null);
-  // const [stopGamePlays, setStopGamePlays] = useState(false);
+  // eslint-disable-next-line no-unused-vars
+  const [stopGamePlays, setStopGamePlays] = useState(false);
   const [finishNumbers4x4, setFinishNumbers4x4] = useState(0);
 
   const stopGameTimeNumber4x4 = () => {
@@ -46,10 +47,6 @@ export default function GamePlay() {
   const menuButtonHandler = () => {
     setMenuButtonActive(!menuButtonActive);
   };
-
-  // const stopsHandler = () => {
-  //   setStopGamePlays(true);
-  // }
 
   return (
     <div className="gamePlay">
