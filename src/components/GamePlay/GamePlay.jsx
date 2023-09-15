@@ -12,14 +12,19 @@ export default function GamePlay() {
   const [intervalId, setIntervalId] = useState(null);
   const [stopGamePlays, setStopGamePlays] = useState(false);
   const [finishNumbers4x4, setFinishNumbers4x4] = useState(0);
+  const [finishNumbers6x6, setFinishNumbers6x6] = useState(0);
 
   const stopGameTimeNumber4x4 = () => {
     setFinishNumbers4x4(finishNumbers4x4 + 1);
   };
 
+  const stopGameTimeNumber6x6 = () => {
+    setFinishNumbers6x6(finishNumbers6x6 + 1);
+  };
+
   // Use useEffect to handle side effects when finishNumbers4x4 changes
   useEffect(() => {
-    if (finishNumbers4x4 === 1) {
+    if (finishNumbers4x4 === 8) {
       setStopGamePlays(true);
       clearInterval(intervalId);
     }
@@ -28,6 +33,13 @@ export default function GamePlay() {
   const numberOfMoveHandler = () => {
     setNumberOfMove(numberOfMove + 1);
   };
+
+  useEffect(() => {
+    if (finishNumbers6x6 === 18) {
+      setStopGamePlays(true);
+      clearInterval(intervalId);
+    }
+  }, [finishNumbers6x6, intervalId]);
 
   useEffect(() => {
     const id = setInterval(() => {
@@ -51,7 +63,7 @@ export default function GamePlay() {
     <div className="gamePlay">
       <div className={`${menuButtonActive ? "opacity50" : "HeaderGameFooter"}`}>
         <Header name={menuButtonHandler} />
-        {finishNumbers4x4 ? (
+        {finishNumbers4x4 === 8 || finishNumbers6x6 === 18 ? (
           <SoloFinish
             minutes={minutes}
             seconds={seconds}
@@ -65,6 +77,7 @@ export default function GamePlay() {
           stopGamePlaysHandler={() => setStopGamePlays(true)}
           numberOfMoveHandler={numberOfMoveHandler}
           stopGameTimeNumber4x4={stopGameTimeNumber4x4}
+          stopGameTimeNumber6x6={stopGameTimeNumber6x6}
         />
         <Footer
           minutes={minutes}

@@ -9,8 +9,9 @@ function Game({
   stopGamePlaysHandler,
   numberOfMoveHandler,
   stopGameTimeNumber4x4,
+  stopGameTimeNumber6x6,
 }) {
-  const [itemsIsMini, setItemsIsMini] = useState(true);
+  const [itemsIsMini, setItemsIsMini] = useState(false);
   const [items, setItems] = useState(itemsIsMini ? numbersMini : numbers);
   const [iconsIsMini, setIconsIsMini] = useState(true);
   const [importIcons, setImportIcons] = useState(
@@ -18,12 +19,17 @@ function Game({
   );
   const [prev, setPrev] = useState(-1);
   const [hidden, setHidden] = useState(false);
-  const [numberIsTrue, setNumberIsTrue] = useState(true);
+  const [numberIsTrue, setNumberIsTrue] = useState(false);
 
   const check = (current) => {
     if (items[current].id == items[prev].id) {
-      stopGamePlaysHandler();
-      stopGameTimeNumber4x4();
+      if (itemsIsMini) {
+        stopGamePlaysHandler();
+        stopGameTimeNumber4x4();
+      } else {
+        stopGamePlaysHandler();
+        stopGameTimeNumber6x6();
+      }
       items[current].stat = "correct";
       items[prev].stat = "correct";
       setItems([...items]);
@@ -56,6 +62,13 @@ function Game({
 
   const checkIcons = (current) => {
     if (importIcons[current].id == importIcons[prev].id) {
+      if (iconsIsMini) {
+        stopGamePlaysHandler();
+        stopGameTimeNumber4x4();
+      } else {
+        stopGamePlaysHandler();
+        stopGameTimeNumber6x6();
+      }
       numberOfMoveHandler();
       importIcons[current].stat = "correct-icon";
       importIcons[prev].stat = "correct-icon";
