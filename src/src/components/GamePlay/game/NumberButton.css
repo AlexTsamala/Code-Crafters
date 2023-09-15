@@ -1,0 +1,182 @@
+/* BUTTONS 6x6 */
+
+button {
+    background: #304859;
+    color: #FCFCFC;
+    font-weight: 700;
+    font-size: 24px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+
+}
+
+button p {
+    scale: 0;
+    transition: .3s ease-in-out;
+
+}
+
+.active {
+    background: #BCCED9;
+    color: #FCFCFC;
+    font-weight: 700;
+    font-size: 24px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}
+
+.active p {
+    scale: 1;
+}
+
+.correct {
+    background: #FDA214;
+    color: #FCFCFC;
+    font-weight: 700;
+    font-size: 24px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}
+
+.correct p {
+    scale: 1;
+}
+
+.wrong {
+    background: #fd1414;
+    color: #FCFCFC;
+    font-weight: 700;
+    font-size: 24px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}
+
+.wrong p {
+    scale: 1;
+}
+
+button p,
+.correct p,
+.wrong p,
+.active p {
+    font-size: 24px;
+}
+
+/* BUTTONS 4x4 */
+
+.-mini {
+    background: #304859;
+    color: #FCFCFC;
+    font-weight: 700;
+    font-size: 24px;
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}
+
+.-mini p {
+    scale: 0;
+}
+
+.active-mini {
+    background: #BCCED9;
+    color: #FCFCFC;
+    font-weight: 700;
+    font-size: 24px;
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}
+
+.active-mini p {
+    font-size: 40px;
+    scale: 1;
+}
+
+.correct-mini {
+    background: #FDA214;
+    color: #FCFCFC;
+    font-weight: 700;
+    font-size: 24px;
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}
+
+.correct-mini p {
+    font-size: 40px;
+    scale: 1;
+}
+
+.wrong-mini {
+    background: #fd1414;
+    color: #FCFCFC;
+    font-weight: 700;
+    font-size: 24px;
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}
+
+.wrong-mini p {
+    font-size: 40px;
+    scale: 1;
+}
+
+@media screen and (min-width: 768px) {
+
+    /* BUTTONS 6x6 */
+
+    button,
+    .correct,
+    .wrong,
+    .active {
+        width: 82px;
+        height: 82px;
+    }
+
+    button p,
+    .correct p,
+    .wrong p,
+    .active p {
+        font-size: 44px;
+    }
+
+    /* BUTTONS 4x4 */
+
+    .-mini,
+    .correct-mini,
+    .wrong-mini,
+    .active-mini {
+        width: 118px;
+        height: 118px;
+    }
+
+    .-mini p,
+    .correct-mini p,
+    .wrong-mini p,
+    .active-mini p {
+        font-size: 74px;
+    }
+}

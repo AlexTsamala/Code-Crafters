@@ -1,0 +1,183 @@
+/* BUTTONS 6x6 */
+
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #304859;
+    color: #FCFCFC;
+    font-weight: 700;
+    font-size: 24px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+
+button img {
+    scale: 0;
+    transition: .3s ease-in-out;
+}
+
+.active-icon {
+    background: #BCCED9;
+    color: #FCFCFC;
+    font-weight: 700;
+    font-size: 24px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}
+
+.active-icon img {
+    scale: 1;
+}
+
+.correct-icon {
+    background: #FDA214;
+    color: #FCFCFC;
+    font-weight: 700;
+    font-size: 24px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}
+
+.correct-icon img {
+    scale: 1;
+}
+
+.wrong-icon {
+    background: #fd1414;
+    color: #FCFCFC;
+    font-weight: 700;
+    font-size: 24px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}
+
+.wrong-icon img {
+    scale: 1;
+}
+
+button img,
+.correct-icon img,
+.wrong-icon img,
+.active-icon img {
+    width: 24px;
+}
+
+/* BUTTONS 4x4 */
+
+.-mini {
+    background: #304859;
+    color: #FCFCFC;
+    font-weight: 700;
+    font-size: 24px;
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}
+
+.-mini img {
+    scale: 0;
+}
+
+.active-icon-mini {
+    background: #BCCED9;
+    color: #FCFCFC;
+    font-weight: 700;
+    font-size: 24px;
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}
+
+.active-icon-mini img {
+    width: 40px;
+    scale: 1;
+}
+
+.correct-icon-mini {
+    background: #FDA214;
+    color: #FCFCFC;
+    font-weight: 700;
+    font-size: 24px;
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}
+
+.correct-icon-mini img {
+    font-size: 40px;
+    scale: 1;
+}
+
+.wrong-icon-mini {
+    background: #fd1414;
+    color: #FCFCFC;
+    font-weight: 700;
+    font-size: 24px;
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}
+
+.wrong-icon-mini img {
+    width: 40px;
+    scale: 1;
+}
+
+@media screen and (min-width: 768px) {
+
+    /* BUTTONS 6x6 */
+
+    button,
+    .correct-icon,
+    .wrong-icon,
+    .active-icon {
+        width: 82px;
+        height: 82px;
+    }
+
+    button img,
+    .correct-icon img,
+    .wrong-icon img,
+    .active-icon img {
+        width: 44px;
+    }
+
+    /* BUTTONS 4x4 */
+
+    .-mini,
+    .correct-icon-mini,
+    .wrong-icon-mini,
+    .active-icon-mini {
+        width: 118px;
+        height: 118px;
+    }
+
+    .-mini img,
+    .correct-icon-mini img,
+    .wrong-icon-mini img,
+    .active-icon-mini img {
+        width: 74px;
+    }
+}

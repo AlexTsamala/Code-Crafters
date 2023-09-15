@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.App {
+  /* min-height: 100vh; */
+  padding: 20px;
+}
+
+
+@media screen and (min-width: 767px) {
+  .App {
+    padding: 35px;
+  }
+
+}
+
+@media screen and (min-width: 1050px) {
+  .App {
+    padding: 15px 165px;
+  }
+
+  #root {
+    height: 100vh;
+  }
+
+}
