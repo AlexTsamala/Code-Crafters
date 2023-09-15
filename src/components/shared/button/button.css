@@ -1,0 +1,42 @@
+button {
+  border-radius: 26px;
+  border: none;
+  color: #fcfcfc;
+  background-color: #bcced9;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  width: 134px;
+  height: 40px;
+}
+.shared-buttons:hover{
+ background-color: #6395B8!important;
+}
+.numbers {
+  width: 62px;
+  height: 40px;
+}
+.yellow-button:hover {
+  background-color: #ffb84a;
+}
+@media (min-width: 768px) {
+  button {
+    width: 256px;
+    height: 52px;
+    font-size: 26px;
+  }
+  .numbers {
+    width: 119px;
+    height: 52px;
+  }
+}
+@media (min-width: 1440px) {
+  button {
+    width: 256px;
+    height: 52px;
+  }
+  .numbers {
+    width: 119px;
+    height: 52px;
+  }
+}
