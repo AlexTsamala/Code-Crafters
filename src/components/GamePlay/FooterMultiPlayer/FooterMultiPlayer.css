@@ -16,9 +16,6 @@
   background: #dfe7ec;
   height: 70px;
 }
-.footer-text,
-.footer-text,
-.footer-text,
 .footer-text {
   color: #7191a5;
   text-align: center;
@@ -28,9 +25,6 @@
   font-weight: 700;
   line-height: normal;
 }
-.result-pairs,
-.result-pairs,
-.result-pairs,
 .result-pairs {
   color: #304859;
   text-align: center;
@@ -62,4 +56,20 @@
 }
 .display-none-for-triangle {
   display: none;
+}
+@media (min-width:768px) {
+  .footer-box-active{
+  width: 164px;
+height: 80px;
+}
+.footer-text{
+margin-top: 7px;
+margin-left: -110px;
+}
+.result-pairs{
+  font-size: 28px;
+  display: flex;
+  margin-left: 10px;
+  margin-top: 8px;
+}
 }
