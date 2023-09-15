@@ -91,17 +91,7 @@ export default function GamePlay() {
         menuButtonActive={menuButtonActive}
         menuButtonHandler={menuButtonHandler}
       />
-<<<<<<< HEAD
-
-      {/* <SoloFinish */}
-      {/* className={`${menuButtonActive? 'opacity50': 'HeaderGameFooter' }` */}
-      {/* აქ ასეთი რაღაც გაკეთდება, რო როცა თამაში მორჩება, გამოაჩინოს SoloFinish */}
-      {/* მანამდე კი არაფერი */}
-      {/* /> */}
-     </div>
-=======
     </div>
->>>>>>> main
   );
 }
 
