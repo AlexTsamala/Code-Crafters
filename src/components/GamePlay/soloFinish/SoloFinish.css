@@ -4,6 +4,7 @@
     justify-content: center;
     position: absolute;
     top: 16%;
+    z-index: 10;
 }
 
 .soloFinish {
@@ -25,7 +26,7 @@
     margin-top: 10px;
     font-size: 14px;
     color: #7191A5;
-    
+
 }
 
 .timeAndMoveBox {
@@ -38,9 +39,11 @@
     align-items: center;
     margin-top: 20px;
 }
+
 .marginAdd {
     margin-top: 10px;
 }
+
 .marginAdd15 {
     margin-top: 15px;
 }
@@ -65,14 +68,14 @@
     background-color: #FDA214;
     font-size: 18px;
     color: #FCFCFC;
-    
+
 }
 
 .soloRestart:hover {
     background-color: #FFB84A;
     cursor: pointer;
     transition: 0.3s ease-in-out;
-    
+
 }
 
 .soloSetup {
@@ -84,7 +87,7 @@
     background-color: #DFE7EC;
     font-size: 18px;
     color: #304859;
-    
+
 }
 
 .soloSetup:hover {
@@ -107,6 +110,4 @@
 }
 
 /* Desktop */
-@media screen and (min-width: 767px) {
-
-}
+@media screen and (min-width: 767px) {}

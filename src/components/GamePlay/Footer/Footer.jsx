@@ -2,22 +2,7 @@
 import "./Footer.css";
 import { useEffect, useState } from "react";
 
-export default function Footer() {
-  const [timing, setTiming] = useState(0);
-
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      setTiming((preTime) => preTime + 1);
-    }, 1000);
-
-    return () => {
-      clearInterval(intervalId);
-    };
-  }, []);
-
-  const minutes = Math.floor(timing / 60);
-  const seconds = timing % 60;
-
+export default function Footer({ numberOfMove, minutes, seconds }) {
   // კარგი იქნება თუ ეს ტაიმერი პირველი გეიმის, აიქონზე კლიკისას დაიწყება
 
   return (
@@ -35,7 +20,7 @@ export default function Footer() {
           <p className="fontFamily timeText">Moves</p>
           <p className="fontFamily timeClock">
             {/* მოძრაობა უნდა შემოიტანო, props-ად უნდა მივიღო  Game ფოლდერიდან */}
-            ??
+            {numberOfMove}
           </p>
         </div>
       </div>
